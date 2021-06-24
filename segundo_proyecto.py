@@ -4,10 +4,14 @@ import time
 inicio=time.time()
 
 
-
 print("**************************")
 print("Bienvenido a casino Royale")
 print("**************************")
+
+#Variables globales
+ganaste=0
+perdiste=0
+
 
 #Funcion
 def apuestas(fichas,probabilidad,maximo_jugado):
@@ -24,21 +28,62 @@ def apuestas(fichas,probabilidad,maximo_jugado):
             #print("Perdiste")
         tmp+=1
     if fichas == 0:
-        return(f"perdiste, te quedan {fichas} fichas y apostaste {tmp} veces")
-    if fichas >0:
-        return(f"ganaste, te quedan {fichas} fichas y apostaste {tmp} veces")
+        contador=-1
+        return(f"perdiste, te quedan {fichas} fichas y apostaste {tmp} veces",contador)
+    if fichas > 0:
+        contador=1
+        return(f"ganaste, te quedan {fichas} fichas y apostaste {tmp} veces",contador)
 
 
 #Llamar 20 veces la funcion
 for _ in range(1,21):
+    
     print(f"\nResultado de la noche numero {_}:")
-    print(apuestas(50 , 0.4 , 300))#fichas, probabilidad, maximo jugado
+    borrame=apuestas(50 , 0.4 , 300)#fichas, probabilidad, maximo jugado
+    print(f"{borrame[0]}")
     
+    if borrame[1]==1:
+        ganaste+=1
+    elif borrame[1]==-1:
+        perdiste+=1
+        
+print("\n***************************************")
+print(f"* ganaste {ganaste} veces y perdiste {perdiste} veces *")
+print("***************************************\n")
     
+
     
     
 #Tiempo empleado en correr el programa
 fin=time.time()
 diferencia=fin-inicio
 print(f"\nDemoramos {diferencia} en correr todo el programa")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
