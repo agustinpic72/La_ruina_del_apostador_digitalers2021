@@ -23,7 +23,7 @@ for _ in range(0,20):
     tmp=0
     while fichas>0 and tmp<maximo_jugado:
         lista=[0,1]
-        resultado=random.choices(lista,weights=[0.4,0.6])
+        resultado=random.choices(lista,weights=[probabilidad,0.6])
         borrame=resultado.pop(0)
         if borrame==0:
             fichas+=1

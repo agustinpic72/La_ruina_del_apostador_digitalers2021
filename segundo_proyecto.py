@@ -18,8 +18,8 @@ def apuestas(fichas,probabilidad,maximo_jugado):
     tmp=0
     while fichas>0 and tmp<maximo_jugado:
         lista=[0,1]
-        resultado= random.choices(lista,weights=[1-probabilidad,probabilidad])
-        borrame=resultado.pop(0)
+        resultado = random.choices(lista,weights=[1-probabilidad,probabilidad])
+        borrame = resultado.pop(0)
         if borrame==1:
             fichas+=1
             #print("Ganaste")
@@ -47,9 +47,9 @@ for _ in range(1,21):
     elif borrame[1]==-1:
         perdiste+=1
         
-print("\n***************************************")
-print(f"* ganaste {ganaste} veces y perdiste {perdiste} veces *")
-print("***************************************\n")
+print("\n*****************************************")
+print(f"* ganaste {ganaste} noches y perdiste {perdiste} noches *")
+print("*****************************************\n")
     
 
     
