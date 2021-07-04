@@ -1,5 +1,5 @@
-import random
-import time
+import random, time
+
 
 inicio = time.time()
 
@@ -36,10 +36,10 @@ def apuestas(fichas , probabilidad , maximo_jugado):
         tmp += 1
     if fichas == 0:
         contador =- 1
-        return(f"perdiste, te quedan {fichas} fichas y apostaste {tmp} veces", contador , winrate , lossrate)
+        return(f"Perdiste, te quedan {fichas} fichas y apostaste {tmp} veces", contador , winrate , lossrate)
     if fichas > 0:
         contador = 1
-        return(f"ganaste, te quedan {fichas} fichas y apostaste {tmp} veces", contador , winrate , lossrate)
+        return(f"Ganaste, te quedan {fichas} fichas y apostaste {tmp} veces", contador , winrate , lossrate)
 
 
 #Llamar 20 veces la funcion
